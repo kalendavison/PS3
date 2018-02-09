@@ -97,3 +97,9 @@ curfew.HUFFLEPUFF = function(x){
 
 curfew(test)
 ls.str(Gryffindor_Tower) #successful
+
+##### Problem Set 3 #####
+
+choice = as.numeric(sample(1:3, 1))
+class(choice) = "door"
+choice
