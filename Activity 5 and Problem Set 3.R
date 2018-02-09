@@ -66,3 +66,14 @@ sort.student.house = function(x) {
 
 class(sort.student.house("djf"))
 
+#4
+"Gryffindor_Tower" = new.env() 
+"Black_Lake" = new.env()
+"Ravenclaw_Tower" = new.env()
+"Basement" = new.env()
+
+curfew = function(x){
+  UseMethod("curfew", x)
+}
+
+
