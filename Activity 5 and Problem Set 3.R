@@ -16,10 +16,9 @@ assign.student <- function(name) {
 }
 
 test = assign.student("Cath")
+test
 
 #2
-stuff = matrix(c(1:16), nrow = 4)
-
 sort.student = function(x) {
             stuff = matrix(sample(1:100, 16), nrow=4)
             x = assign.student("x")
@@ -40,3 +39,30 @@ sort.student = function(x) {
 
 sort.student("Harold Potter")
 sort.student("Voldemort")
+
+
+#3
+sort.student.house = function(x) {
+  stuff = matrix(sample(1:100, 16), nrow=4)
+  x = assign.student()
+  finalsort <- t(stuff) %*% x
+  if(max(finalsort) == finalsort[1]) {
+    class(x) = c("student", "GRYFFINDOR")
+    return(x)
+  }
+  if(max(finalsort) == finalsort[2]) {
+    class(x) = c("student", "SLYTHERIN")
+    return(x)
+  }
+  if(max(finalsort) == finalsort[3]) {
+    class(x) = c("student", "RAVENCLAW")
+    return(x)
+  }
+  if(max(finalsort) == finalsort[4]) {
+    class(x) = c("student", "HUFFLEPUFF")
+    return(x)
+  }
+}
+
+class(sort.student.house("djf"))
+
