@@ -14,29 +14,29 @@ assign.student <- function(name) {
   class(a) <- "student"
   return(a)
 }
-assign.student("Cathy")
+
+test = assign.student("Cath")
 
 #2
+stuff = matrix(c(1:16), nrow = 4)
 
-setMethod("sort", "student",
-          function(x) {
-            a <- sample(1:100, 4)
-            x<- matrix
-            finalsort <- t(x) %*% a
+sort.student = function(x) {
+            stuff = matrix(sample(1:100, 16), nrow=4)
+            x = assign.student("x")
+            finalsort <- t(stuff) %*% x
             if(max(finalsort) == finalsort[1]) {
-              print("G")
+              print("GRIFFINDOR")
             }
             if(max(finalsort) == finalsort[2]) {
-              print("S")
+              print("SLYTHERIN")
             }
             if(max(finalsort) == finalsort[3]) {
-              print("R")
+              print("RAVENCLAW")
             }
             if(max(finalsort) == finalsort[4]) {
-              print("H")
+              print("HUFFLEPUFF")
             }
-          }
-          
-          sort("Cathy", diag(4))
-          
-          
+}
+
+sort.student("Harold Potter")
+sort.student("Voldemort")
