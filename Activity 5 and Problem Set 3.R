@@ -65,6 +65,8 @@ sort.student.house = function(x) {
 }
 
 class(sort.student.house("djf"))
+test = sort.student.house("tkjad")
+test
 
 #4
 "Gryffindor_Tower" = new.env() 
@@ -77,3 +79,21 @@ curfew = function(x){
 }
 
 
+curfew.GRYFFINDOR = function(x){
+  Gryffindor_Tower$student <- x
+}
+  
+curfew.SLYTHERIN = function(x){
+  Black_Lake$student <- x
+}
+ 
+curfew.RAVENCLAW = function(x){
+  Ravenclaw_Tower <- x
+}
+
+curfew.HUFFLEPUFF = function(x){
+  Basement <- x
+}
+
+curfew(test)
+ls.str(Gryffindor_Tower) #successful
